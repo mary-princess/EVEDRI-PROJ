@@ -50,7 +50,8 @@ namespace WindowsFormsApp2
         public void LoadExcelFile()
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            book.LoadFromFile(myLogs.FilePath);
+            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
 
 
@@ -76,7 +77,8 @@ namespace WindowsFormsApp2
         public void showStatus(string status) 
         {
             Workbook workbook = new Workbook();
-            workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            workbook.LoadFromFile(myLogs.FilePath);
+            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
 
             Worksheet worksheet = workbook.Worksheets[0];
             DataTable dt = worksheet.ExportDataTable();
@@ -129,8 +131,9 @@ namespace WindowsFormsApp2
             //}
 
             Workbook workbook = new Workbook();
+            workbook.LoadFromFile(myLogs.FilePath);
             //workbook.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
-            workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
 
             Worksheet sh = workbook.Worksheets[0];
 
@@ -139,8 +142,9 @@ namespace WindowsFormsApp2
 
             showStatus("1");
 
+            workbook.LoadFromFile(myLogs.FilePath, ExcelVersion.Version2016);
             //workbook.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx", ExcelVersion.Version2016);
-            workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
+            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
 
             DataTable dt = sh.ExportDataTable();
             dgvData.DataSource = dt;

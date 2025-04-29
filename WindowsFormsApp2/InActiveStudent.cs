@@ -64,7 +64,8 @@ namespace WindowsFormsApp2
         public void showStatus(string status)
         {
             Workbook workbook = new Workbook();
-            workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            workbook.LoadFromFile(myLogs.FilePath);
+            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
 
             Worksheet worksheet = workbook.Worksheets[0];
             DataTable dt = worksheet.ExportDataTable();

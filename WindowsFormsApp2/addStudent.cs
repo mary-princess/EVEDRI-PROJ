@@ -38,7 +38,8 @@ namespace WindowsFormsApp2
         private void btnInsert_Click(object sender, EventArgs e)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            book.LoadFromFile(myLogs.FilePath);
+            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
             Worksheet sheet = book.Worksheets[0];
 
@@ -166,7 +167,8 @@ namespace WindowsFormsApp2
             sheet.Range[row, 11].Value = imagePath;
             sheet.Range[row, 12].Value = email;
 
-            book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
+            //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
             //book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx", ExcelVersion.Version2016);
 
             myLogs.insertLogs(myLogs.GlobalUser, "Inserting Info");

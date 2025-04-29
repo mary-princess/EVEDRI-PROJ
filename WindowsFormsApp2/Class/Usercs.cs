@@ -14,6 +14,14 @@ namespace WindowsFormsApp2.Class
         public Image Profile {  get; set; }
         public string ImagePath { get; set; }
 
+        public string FilePath { get; set; }    
+        public Usercs() { }
+
+        public Usercs(Usercs usercs)
+        {
+            FilePath = @"C:\\Users\\ACT-STUDENT\\Desktop\Book1.xlsx"; //school
+            //FilePath = @"C:\Users\User\OneDrive\Desktop\Book1.xlsx"; //laptop
+        }
 
         public int Age { get; set; }
 

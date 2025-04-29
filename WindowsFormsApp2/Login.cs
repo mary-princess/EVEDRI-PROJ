@@ -74,7 +74,9 @@ namespace WindowsFormsApp2
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            book.LoadFromFile(logs.FilePath);
+
 
             Worksheet sheet = book.Worksheets[0];
 

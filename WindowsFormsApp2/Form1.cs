@@ -135,7 +135,8 @@ namespace WindowsFormsApp2
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            book.LoadFromFile(myLogs.FilePath);
+            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
 
             Worksheet sheet = book.Worksheets[0];
@@ -198,9 +199,9 @@ namespace WindowsFormsApp2
             sheet.Range[row, 9].Value = txtPassword.Text;
             sheet.Range[row, 11].Value = imagePath;
 
-            
 
-            book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            book.SaveToFile(myLogs.FilePath);
+            //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             //book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
 
             myLogs.insertLogs(myLogs.GlobalUser, "Updating Info");
@@ -318,7 +319,8 @@ namespace WindowsFormsApp2
         private void btnProfile_Click(object sender, EventArgs e)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            book.LoadFromFile(myLogs.FilePath);
+            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
 
             Worksheet sheet = book.Worksheets[0];
@@ -343,10 +345,11 @@ namespace WindowsFormsApp2
 
                 sheet.Range[row, 11].Value = file.FileName;
 
-                book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
+                book.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
+                //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
                 //book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx", ExcelVersion.Version2016);
 
-            }   
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

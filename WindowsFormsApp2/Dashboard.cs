@@ -60,7 +60,8 @@ namespace WindowsFormsApp2
         public int showCount(int c, string value)
         {
             Workbook wb = new Workbook();
-            wb.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+            wb.LoadFromFile(myLogs.FilePath);
+            //wb.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             Worksheet sh = wb.Worksheets[0];
             int row = sh.Rows.Length;
             int counter = 0;
