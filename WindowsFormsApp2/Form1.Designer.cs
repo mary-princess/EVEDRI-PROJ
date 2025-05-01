@@ -30,38 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.picProfile = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radMale = new System.Windows.Forms.RadioButton();
-            this.radFemale = new System.Windows.Forms.RadioButton();
-            this.chkVball = new System.Windows.Forms.CheckBox();
-            this.chkBball = new System.Windows.Forms.CheckBox();
-            this.chkBadminton = new System.Windows.Forms.CheckBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txtProfile = new System.Windows.Forms.TextBox();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cboDegree = new System.Windows.Forms.ComboBox();
-            this.cboColor = new System.Windows.Forms.ComboBox();
-            this.txtSayings = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,13 +43,42 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtProfile = new System.Windows.Forms.TextBox();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cboDegree = new System.Windows.Forms.ComboBox();
+            this.cboColor = new System.Windows.Forms.ComboBox();
+            this.txtSayings = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.dtpBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.chkBadminton = new System.Windows.Forms.CheckBox();
+            this.chkBball = new System.Windows.Forms.CheckBox();
+            this.chkVball = new System.Windows.Forms.CheckBox();
+            this.radFemale = new System.Windows.Forms.RadioButton();
+            this.radMale = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.guna2GradientPanel1.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picProfile
@@ -94,196 +92,6 @@
             this.picProfile.TabIndex = 6;
             this.picProfile.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label1.Location = new System.Drawing.Point(34, 78);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label2.Location = new System.Drawing.Point(486, 78);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Gender:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label3.Location = new System.Drawing.Point(34, 182);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Hobbies:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label4.Location = new System.Drawing.Point(34, 243);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 38);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Favorite\r\nColor:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label5.Location = new System.Drawing.Point(486, 228);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sayings:";
-            // 
-            // radMale
-            // 
-            this.radMale.AutoSize = true;
-            this.radMale.BackColor = System.Drawing.Color.Transparent;
-            this.radMale.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.radMale.Location = new System.Drawing.Point(589, 74);
-            this.radMale.Margin = new System.Windows.Forms.Padding(4);
-            this.radMale.Name = "radMale";
-            this.radMale.Size = new System.Drawing.Size(68, 24);
-            this.radMale.TabIndex = 6;
-            this.radMale.Text = "Male";
-            this.radMale.UseVisualStyleBackColor = false;
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.BackColor = System.Drawing.Color.Transparent;
-            this.radFemale.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.radFemale.Location = new System.Drawing.Point(690, 74);
-            this.radFemale.Margin = new System.Windows.Forms.Padding(4);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(83, 24);
-            this.radFemale.TabIndex = 7;
-            this.radFemale.Text = "Female";
-            this.radFemale.UseVisualStyleBackColor = false;
-            // 
-            // chkVball
-            // 
-            this.chkVball.AutoSize = true;
-            this.chkVball.BackColor = System.Drawing.Color.Transparent;
-            this.chkVball.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkVball.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.chkVball.Location = new System.Drawing.Point(150, 181);
-            this.chkVball.Margin = new System.Windows.Forms.Padding(4);
-            this.chkVball.Name = "chkVball";
-            this.chkVball.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkVball.Size = new System.Drawing.Size(102, 24);
-            this.chkVball.TabIndex = 8;
-            this.chkVball.Text = "Volleyball";
-            this.chkVball.UseVisualStyleBackColor = false;
-            // 
-            // chkBball
-            // 
-            this.chkBball.AutoSize = true;
-            this.chkBball.BackColor = System.Drawing.Color.Transparent;
-            this.chkBball.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBball.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.chkBball.Location = new System.Drawing.Point(150, 214);
-            this.chkBball.Margin = new System.Windows.Forms.Padding(4);
-            this.chkBball.Name = "chkBball";
-            this.chkBball.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkBball.Size = new System.Drawing.Size(105, 24);
-            this.chkBball.TabIndex = 9;
-            this.chkBball.Text = "Basketball";
-            this.chkBball.UseVisualStyleBackColor = false;
-            // 
-            // chkBadminton
-            // 
-            this.chkBadminton.AutoSize = true;
-            this.chkBadminton.BackColor = System.Drawing.Color.Transparent;
-            this.chkBadminton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBadminton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.chkBadminton.Location = new System.Drawing.Point(306, 181);
-            this.chkBadminton.Margin = new System.Windows.Forms.Padding(4);
-            this.chkBadminton.Name = "chkBadminton";
-            this.chkBadminton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkBadminton.Size = new System.Drawing.Size(109, 24);
-            this.chkBadminton.TabIndex = 10;
-            this.chkBadminton.Text = "Badminton";
-            this.chkBadminton.UseVisualStyleBackColor = false;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.lblUsername.Location = new System.Drawing.Point(34, 69);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(96, 19);
-            this.lblUsername.TabIndex = 17;
-            this.lblUsername.Text = "Username:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label7.Location = new System.Drawing.Point(486, 67);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 19);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Password:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.lblID.Location = new System.Drawing.Point(115, 77);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(28, 21);
-            this.lblID.TabIndex = 21;
-            this.lblID.Text = "ID";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(24, 20);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(292, 34);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "Personal Information";
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
@@ -294,251 +102,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 78;
             this.pictureBox8.TabStop = false;
-            // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.BorderRadius = 25;
-            this.guna2GradientPanel1.Controls.Add(this.txtProfile);
-            this.guna2GradientPanel1.Controls.Add(this.btnProfile);
-            this.guna2GradientPanel1.Controls.Add(this.label11);
-            this.guna2GradientPanel1.Controls.Add(this.lblAge);
-            this.guna2GradientPanel1.Controls.Add(this.label10);
-            this.guna2GradientPanel1.Controls.Add(this.cboDegree);
-            this.guna2GradientPanel1.Controls.Add(this.cboColor);
-            this.guna2GradientPanel1.Controls.Add(this.txtSayings);
-            this.guna2GradientPanel1.Controls.Add(this.txtName);
-            this.guna2GradientPanel1.Controls.Add(this.label9);
-            this.guna2GradientPanel1.Controls.Add(this.label8);
-            this.guna2GradientPanel1.Controls.Add(this.lblID);
-            this.guna2GradientPanel1.Controls.Add(this.dtpBirthdate);
-            this.guna2GradientPanel1.Controls.Add(this.label6);
-            this.guna2GradientPanel1.Controls.Add(this.chkBadminton);
-            this.guna2GradientPanel1.Controls.Add(this.chkBball);
-            this.guna2GradientPanel1.Controls.Add(this.chkVball);
-            this.guna2GradientPanel1.Controls.Add(this.radFemale);
-            this.guna2GradientPanel1.Controls.Add(this.radMale);
-            this.guna2GradientPanel1.Controls.Add(this.label5);
-            this.guna2GradientPanel1.Controls.Add(this.label4);
-            this.guna2GradientPanel1.Controls.Add(this.label3);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(97)))), ((int)(((byte)(189)))));
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(292, 46);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(907, 381);
-            this.guna2GradientPanel1.TabIndex = 79;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
-            // 
-            // txtProfile
-            // 
-            this.txtProfile.BackColor = System.Drawing.Color.White;
-            this.txtProfile.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.txtProfile.Location = new System.Drawing.Point(150, 314);
-            this.txtProfile.Name = "txtProfile";
-            this.txtProfile.Size = new System.Drawing.Size(286, 28);
-            this.txtProfile.TabIndex = 97;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.btnProfile.BorderThickness = 1;
-            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProfile.FillColor = System.Drawing.Color.White;
-            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.btnProfile.Location = new System.Drawing.Point(490, 309);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(124, 33);
-            this.btnProfile.TabIndex = 89;
-            this.btnProfile.Text = "PROFILE";
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label11.Location = new System.Drawing.Point(34, 318);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 19);
-            this.label11.TabIndex = 96;
-            this.label11.Text = "Picture:";
-            // 
-            // lblAge
-            // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.BackColor = System.Drawing.Color.Transparent;
-            this.lblAge.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.lblAge.Location = new System.Drawing.Point(585, 134);
-            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(45, 21);
-            this.lblAge.TabIndex = 95;
-            this.lblAge.Text = "Age";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label10.Location = new System.Drawing.Point(486, 136);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 19);
-            this.label10.TabIndex = 94;
-            this.label10.Text = "Age:";
-            // 
-            // cboDegree
-            // 
-            this.cboDegree.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDegree.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboDegree.FormattingEnabled = true;
-            this.cboDegree.Items.AddRange(new object[] {
-            "BSCS",
-            "BSIT",
-            "BSCpE"});
-            this.cboDegree.Location = new System.Drawing.Point(589, 182);
-            this.cboDegree.Name = "cboDegree";
-            this.cboDegree.Size = new System.Drawing.Size(286, 29);
-            this.cboDegree.TabIndex = 93;
-            // 
-            // cboColor
-            // 
-            this.cboColor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboColor.FormattingEnabled = true;
-            this.cboColor.Items.AddRange(new object[] {
-            "Red",
-            "Blue",
-            "Yellow"});
-            this.cboColor.Location = new System.Drawing.Point(150, 250);
-            this.cboColor.Name = "cboColor";
-            this.cboColor.Size = new System.Drawing.Size(286, 29);
-            this.cboColor.TabIndex = 91;
-            // 
-            // txtSayings
-            // 
-            this.txtSayings.BackColor = System.Drawing.Color.White;
-            this.txtSayings.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSayings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.txtSayings.Location = new System.Drawing.Point(589, 228);
-            this.txtSayings.Multiline = true;
-            this.txtSayings.Name = "txtSayings";
-            this.txtSayings.Size = new System.Drawing.Size(286, 53);
-            this.txtSayings.TabIndex = 89;
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.txtName.Location = new System.Drawing.Point(150, 73);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(286, 28);
-            this.txtName.TabIndex = 83;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label9.Location = new System.Drawing.Point(486, 188);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 19);
-            this.label9.TabIndex = 78;
-            this.label9.Text = "Program:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label8.Location = new System.Drawing.Point(34, 136);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 19);
-            this.label8.TabIndex = 77;
-            this.label8.Text = "Birthdate:";
-            // 
-            // dtpBirthdate
-            // 
-            this.dtpBirthdate.Checked = true;
-            this.dtpBirthdate.FillColor = System.Drawing.Color.White;
-            this.dtpBirthdate.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthdate.Location = new System.Drawing.Point(150, 130);
-            this.dtpBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpBirthdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpBirthdate.Name = "dtpBirthdate";
-            this.dtpBirthdate.Size = new System.Drawing.Size(286, 26);
-            this.dtpBirthdate.TabIndex = 76;
-            this.dtpBirthdate.Value = new System.DateTime(2025, 3, 17, 23, 38, 31, 626);
-            // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.BorderRadius = 25;
-            this.guna2GradientPanel2.Controls.Add(this.txtEmailAddress);
-            this.guna2GradientPanel2.Controls.Add(this.label12);
-            this.guna2GradientPanel2.Controls.Add(this.txtPassword);
-            this.guna2GradientPanel2.Controls.Add(this.txtUsername);
-            this.guna2GradientPanel2.Controls.Add(this.label13);
-            this.guna2GradientPanel2.Controls.Add(this.lblUsername);
-            this.guna2GradientPanel2.Controls.Add(this.label7);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.White;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(97)))), ((int)(((byte)(189)))));
-            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(292, 433);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(907, 155);
-            this.guna2GradientPanel2.TabIndex = 83;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.txtPassword.Location = new System.Drawing.Point(589, 60);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(286, 28);
-            this.txtPassword.TabIndex = 87;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.txtUsername.Location = new System.Drawing.Point(150, 61);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(286, 28);
-            this.txtUsername.TabIndex = 85;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(24, 20);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 34);
-            this.label13.TabIndex = 74;
-            this.label13.Text = "Security";
             // 
             // btnUpdate
             // 
@@ -742,16 +305,84 @@
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Full Name";
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.BorderRadius = 25;
+            this.guna2GradientPanel1.Controls.Add(this.cboStatus);
+            this.guna2GradientPanel1.Controls.Add(this.label6);
+            this.guna2GradientPanel1.Controls.Add(this.txtEmailAddress);
+            this.guna2GradientPanel1.Controls.Add(this.label12);
+            this.guna2GradientPanel1.Controls.Add(this.txtProfile);
+            this.guna2GradientPanel1.Controls.Add(this.btnProfile);
+            this.guna2GradientPanel1.Controls.Add(this.txtPassword);
+            this.guna2GradientPanel1.Controls.Add(this.txtUsername);
+            this.guna2GradientPanel1.Controls.Add(this.label11);
+            this.guna2GradientPanel1.Controls.Add(this.lblUsername);
+            this.guna2GradientPanel1.Controls.Add(this.lblAge);
+            this.guna2GradientPanel1.Controls.Add(this.label7);
+            this.guna2GradientPanel1.Controls.Add(this.label10);
+            this.guna2GradientPanel1.Controls.Add(this.cboDegree);
+            this.guna2GradientPanel1.Controls.Add(this.cboColor);
+            this.guna2GradientPanel1.Controls.Add(this.txtSayings);
+            this.guna2GradientPanel1.Controls.Add(this.txtName);
+            this.guna2GradientPanel1.Controls.Add(this.label9);
+            this.guna2GradientPanel1.Controls.Add(this.label8);
+            this.guna2GradientPanel1.Controls.Add(this.lblID);
+            this.guna2GradientPanel1.Controls.Add(this.dtpBirthdate);
+            this.guna2GradientPanel1.Controls.Add(this.chkBadminton);
+            this.guna2GradientPanel1.Controls.Add(this.chkBball);
+            this.guna2GradientPanel1.Controls.Add(this.chkVball);
+            this.guna2GradientPanel1.Controls.Add(this.radFemale);
+            this.guna2GradientPanel1.Controls.Add(this.radMale);
+            this.guna2GradientPanel1.Controls.Add(this.label5);
+            this.guna2GradientPanel1.Controls.Add(this.label4);
+            this.guna2GradientPanel1.Controls.Add(this.label3);
+            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Controls.Add(this.label1);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(97)))), ((int)(((byte)(189)))));
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(300, 48);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(907, 543);
+            this.guna2GradientPanel1.TabIndex = 92;
+            // 
+            // cboStatus
+            // 
+            this.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cboStatus.Location = new System.Drawing.Point(588, 449);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(286, 29);
+            this.cboStatus.TabIndex = 99;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label6.Location = new System.Drawing.Point(485, 458);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 19);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Status:";
+            // 
             // txtEmailAddress
             // 
             this.txtEmailAddress.BackColor = System.Drawing.Color.White;
             this.txtEmailAddress.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.txtEmailAddress.Location = new System.Drawing.Point(392, 107);
+            this.txtEmailAddress.Location = new System.Drawing.Point(149, 449);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(286, 28);
             this.txtEmailAddress.TabIndex = 89;
-            this.txtEmailAddress.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label12
             // 
@@ -759,12 +390,366 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label12.Location = new System.Drawing.Point(255, 115);
+            this.label12.Location = new System.Drawing.Point(33, 449);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 19);
+            this.label12.Size = new System.Drawing.Size(81, 38);
             this.label12.TabIndex = 88;
-            this.label12.Text = "Email Address:";
+            this.label12.Text = "Email\r\nAddress:";
+            // 
+            // txtProfile
+            // 
+            this.txtProfile.BackColor = System.Drawing.Color.White;
+            this.txtProfile.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtProfile.Location = new System.Drawing.Point(149, 299);
+            this.txtProfile.Name = "txtProfile";
+            this.txtProfile.Size = new System.Drawing.Size(286, 28);
+            this.txtProfile.TabIndex = 97;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.btnProfile.BorderThickness = 1;
+            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProfile.FillColor = System.Drawing.Color.White;
+            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.btnProfile.Location = new System.Drawing.Point(489, 294);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(124, 33);
+            this.btnProfile.TabIndex = 89;
+            this.btnProfile.Text = "PROFILE";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtPassword.Location = new System.Drawing.Point(149, 399);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(286, 28);
+            this.txtPassword.TabIndex = 87;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtUsername.Location = new System.Drawing.Point(149, 347);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(286, 28);
+            this.txtUsername.TabIndex = 85;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label11.Location = new System.Drawing.Point(33, 303);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 19);
+            this.label11.TabIndex = 96;
+            this.label11.Text = "Picture:";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.lblUsername.Location = new System.Drawing.Point(33, 355);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(96, 19);
+            this.lblUsername.TabIndex = 17;
+            this.lblUsername.Text = "Username:";
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
+            this.lblAge.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.lblAge.Location = new System.Drawing.Point(584, 119);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(45, 21);
+            this.lblAge.TabIndex = 95;
+            this.lblAge.Text = "Age";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label7.Location = new System.Drawing.Point(33, 403);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 19);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Password:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label10.Location = new System.Drawing.Point(485, 121);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 19);
+            this.label10.TabIndex = 94;
+            this.label10.Text = "Age:";
+            // 
+            // cboDegree
+            // 
+            this.cboDegree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDegree.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDegree.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboDegree.FormattingEnabled = true;
+            this.cboDegree.Items.AddRange(new object[] {
+            "BSCS",
+            "BSIT",
+            "BSCpE"});
+            this.cboDegree.Location = new System.Drawing.Point(588, 167);
+            this.cboDegree.Name = "cboDegree";
+            this.cboDegree.Size = new System.Drawing.Size(286, 29);
+            this.cboDegree.TabIndex = 93;
+            // 
+            // cboColor
+            // 
+            this.cboColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboColor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboColor.FormattingEnabled = true;
+            this.cboColor.Items.AddRange(new object[] {
+            "Red",
+            "Blue",
+            "Yellow"});
+            this.cboColor.Location = new System.Drawing.Point(149, 235);
+            this.cboColor.Name = "cboColor";
+            this.cboColor.Size = new System.Drawing.Size(286, 29);
+            this.cboColor.TabIndex = 91;
+            // 
+            // txtSayings
+            // 
+            this.txtSayings.BackColor = System.Drawing.Color.White;
+            this.txtSayings.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSayings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtSayings.Location = new System.Drawing.Point(588, 213);
+            this.txtSayings.Multiline = true;
+            this.txtSayings.Name = "txtSayings";
+            this.txtSayings.Size = new System.Drawing.Size(286, 53);
+            this.txtSayings.TabIndex = 89;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtName.Location = new System.Drawing.Point(149, 58);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(286, 28);
+            this.txtName.TabIndex = 83;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label9.Location = new System.Drawing.Point(485, 173);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 19);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "Program:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label8.Location = new System.Drawing.Point(33, 121);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 19);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "Birthdate:";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.lblID.Location = new System.Drawing.Point(114, 62);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(28, 21);
+            this.lblID.TabIndex = 21;
+            this.lblID.Text = "ID";
+            // 
+            // dtpBirthdate
+            // 
+            this.dtpBirthdate.Checked = true;
+            this.dtpBirthdate.FillColor = System.Drawing.Color.White;
+            this.dtpBirthdate.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthdate.Location = new System.Drawing.Point(149, 115);
+            this.dtpBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(286, 26);
+            this.dtpBirthdate.TabIndex = 76;
+            this.dtpBirthdate.Value = new System.DateTime(2025, 3, 17, 23, 38, 31, 626);
+            // 
+            // chkBadminton
+            // 
+            this.chkBadminton.AutoSize = true;
+            this.chkBadminton.BackColor = System.Drawing.Color.Transparent;
+            this.chkBadminton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBadminton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.chkBadminton.Location = new System.Drawing.Point(305, 166);
+            this.chkBadminton.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBadminton.Name = "chkBadminton";
+            this.chkBadminton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBadminton.Size = new System.Drawing.Size(109, 24);
+            this.chkBadminton.TabIndex = 10;
+            this.chkBadminton.Text = "Badminton";
+            this.chkBadminton.UseVisualStyleBackColor = false;
+            // 
+            // chkBball
+            // 
+            this.chkBball.AutoSize = true;
+            this.chkBball.BackColor = System.Drawing.Color.Transparent;
+            this.chkBball.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBball.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.chkBball.Location = new System.Drawing.Point(149, 199);
+            this.chkBball.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBball.Name = "chkBball";
+            this.chkBball.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBball.Size = new System.Drawing.Size(105, 24);
+            this.chkBball.TabIndex = 9;
+            this.chkBball.Text = "Basketball";
+            this.chkBball.UseVisualStyleBackColor = false;
+            // 
+            // chkVball
+            // 
+            this.chkVball.AutoSize = true;
+            this.chkVball.BackColor = System.Drawing.Color.Transparent;
+            this.chkVball.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkVball.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.chkVball.Location = new System.Drawing.Point(149, 166);
+            this.chkVball.Margin = new System.Windows.Forms.Padding(4);
+            this.chkVball.Name = "chkVball";
+            this.chkVball.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkVball.Size = new System.Drawing.Size(102, 24);
+            this.chkVball.TabIndex = 8;
+            this.chkVball.Text = "Volleyball";
+            this.chkVball.UseVisualStyleBackColor = false;
+            // 
+            // radFemale
+            // 
+            this.radFemale.AutoSize = true;
+            this.radFemale.BackColor = System.Drawing.Color.Transparent;
+            this.radFemale.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.radFemale.Location = new System.Drawing.Point(689, 59);
+            this.radFemale.Margin = new System.Windows.Forms.Padding(4);
+            this.radFemale.Name = "radFemale";
+            this.radFemale.Size = new System.Drawing.Size(83, 24);
+            this.radFemale.TabIndex = 7;
+            this.radFemale.Text = "Female";
+            this.radFemale.UseVisualStyleBackColor = false;
+            // 
+            // radMale
+            // 
+            this.radMale.AutoSize = true;
+            this.radMale.BackColor = System.Drawing.Color.Transparent;
+            this.radMale.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.radMale.Location = new System.Drawing.Point(588, 59);
+            this.radMale.Margin = new System.Windows.Forms.Padding(4);
+            this.radMale.Name = "radMale";
+            this.radMale.Size = new System.Drawing.Size(68, 24);
+            this.radMale.TabIndex = 6;
+            this.radMale.Text = "Male";
+            this.radMale.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label5.Location = new System.Drawing.Point(485, 213);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sayings:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label4.Location = new System.Drawing.Point(33, 228);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 38);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Favorite\r\nColor:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label3.Location = new System.Drawing.Point(33, 167);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Hobbies:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label2.Location = new System.Drawing.Point(485, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Gender:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
+            this.label1.Location = new System.Drawing.Point(33, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
             // 
             // Form1
             // 
@@ -772,11 +757,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1243, 649);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.guna2GradientPanel2);
-            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.pictureBox8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -785,48 +769,18 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.RadioButton radMale;
-        public System.Windows.Forms.RadioButton radFemale;
-        public System.Windows.Forms.CheckBox chkVball;
-        public System.Windows.Forms.CheckBox chkBball;
-        public System.Windows.Forms.CheckBox chkBadminton;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button btnClear;
         public Guna.UI2.WinForms.Guna2Button btnUpdate;
-        public System.Windows.Forms.TextBox txtName;
-        public System.Windows.Forms.TextBox txtPassword;
-        public System.Windows.Forms.TextBox txtUsername;
-        public System.Windows.Forms.TextBox txtSayings;
-        public System.Windows.Forms.ComboBox cboColor;
-        public System.Windows.Forms.ComboBox cboDegree;
-        public System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Label lblTime;
@@ -837,13 +791,39 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblName;
-        public System.Windows.Forms.TextBox txtProfile;
-        public Guna.UI2.WinForms.Guna2Button btnProfile;
-        private System.Windows.Forms.Label label11;
-        public Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
         public System.Windows.Forms.PictureBox picProfile;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        public System.Windows.Forms.ComboBox cboStatus;
+        private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtEmailAddress;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox txtProfile;
+        public Guna.UI2.WinForms.Guna2Button btnProfile;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblUsername;
+        public System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.ComboBox cboDegree;
+        public System.Windows.Forms.ComboBox cboColor;
+        public System.Windows.Forms.TextBox txtSayings;
+        public System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label lblID;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
+        public System.Windows.Forms.CheckBox chkBadminton;
+        public System.Windows.Forms.CheckBox chkBball;
+        public System.Windows.Forms.CheckBox chkVball;
+        public System.Windows.Forms.RadioButton radFemale;
+        public System.Windows.Forms.RadioButton radMale;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
