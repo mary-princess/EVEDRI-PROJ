@@ -327,6 +327,7 @@
             this.txtProfile.Name = "txtProfile";
             this.txtProfile.Size = new System.Drawing.Size(286, 28);
             this.txtProfile.TabIndex = 97;
+            this.txtProfile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtProfile_MouseClick);
             // 
             // btnProfile
             // 
@@ -399,6 +400,7 @@
             this.cboDegree.Name = "cboDegree";
             this.cboDegree.Size = new System.Drawing.Size(286, 29);
             this.cboDegree.TabIndex = 93;
+            this.cboDegree.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDegree_MouseClick);
             // 
             // cboColor
             // 
@@ -414,6 +416,8 @@
             this.cboColor.Name = "cboColor";
             this.cboColor.Size = new System.Drawing.Size(286, 29);
             this.cboColor.TabIndex = 91;
+            this.cboColor.SelectedIndexChanged += new System.EventHandler(this.cboColor_SelectedIndexChanged);
+            this.cboColor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboColor_MouseClick);
             // 
             // txtSayings
             // 
@@ -425,6 +429,7 @@
             this.txtSayings.Name = "txtSayings";
             this.txtSayings.Size = new System.Drawing.Size(286, 53);
             this.txtSayings.TabIndex = 89;
+            this.txtSayings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSayings_MouseClick);
             // 
             // txtName
             // 
@@ -435,6 +440,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(286, 28);
             this.txtName.TabIndex = 83;
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
             // 
             // label9
             // 
@@ -505,6 +511,8 @@
             this.chkBadminton.TabIndex = 10;
             this.chkBadminton.Text = "Badminton";
             this.chkBadminton.UseVisualStyleBackColor = false;
+            this.chkBadminton.CheckedChanged += new System.EventHandler(this.chkBadminton_CheckedChanged);
+            this.chkBadminton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chkBadminton_MouseClick);
             // 
             // chkBball
             // 
@@ -520,6 +528,7 @@
             this.chkBball.TabIndex = 9;
             this.chkBball.Text = "Basketball";
             this.chkBball.UseVisualStyleBackColor = false;
+            this.chkBball.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chkBball_MouseClick);
             // 
             // chkVball
             // 
@@ -535,6 +544,7 @@
             this.chkVball.TabIndex = 8;
             this.chkVball.Text = "Volleyball";
             this.chkVball.UseVisualStyleBackColor = false;
+            this.chkVball.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chkVball_MouseClick);
             // 
             // radFemale
             // 
@@ -549,6 +559,7 @@
             this.radFemale.TabIndex = 7;
             this.radFemale.Text = "Female";
             this.radFemale.UseVisualStyleBackColor = false;
+            this.radFemale.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radFemale_MouseClick);
             // 
             // radMale
             // 
@@ -563,6 +574,7 @@
             this.radMale.TabIndex = 6;
             this.radMale.Text = "Male";
             this.radMale.UseVisualStyleBackColor = false;
+            this.radMale.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radMale_MouseClick);
             // 
             // label5
             // 
@@ -649,6 +661,7 @@
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(286, 28);
             this.txtEmailAddress.TabIndex = 89;
+            this.txtEmailAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmailAddress_MouseClick);
             // 
             // label12
             // 
@@ -672,6 +685,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(286, 28);
             this.txtPassword.TabIndex = 87;
+            this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             // 
             // txtUsername
             // 
@@ -682,6 +696,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(286, 28);
             this.txtUsername.TabIndex = 85;
+            this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseClick);
             // 
             // lblUsername
             // 
@@ -726,6 +741,7 @@
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(286, 29);
             this.cboStatus.TabIndex = 99;
+            this.cboStatus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboStatus_MouseClick);
             // 
             // label6
             // 

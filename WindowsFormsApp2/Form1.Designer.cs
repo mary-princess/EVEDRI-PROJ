@@ -813,7 +813,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label lblID;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
         public System.Windows.Forms.CheckBox chkBadminton;
         public System.Windows.Forms.CheckBox chkBball;
         public System.Windows.Forms.CheckBox chkVball;
@@ -824,6 +823,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
     }
 }
 

@@ -52,7 +52,7 @@ namespace WindowsFormsApp2
                 if(existsUser == txtUsername.Text || existsPass == txtPassword.Text)
                 {
                     userExists = true;
-                    break;
+                    
                 }
             }
             if (userExists)
@@ -115,9 +115,14 @@ namespace WindowsFormsApp2
                 error.SetError(cboStatus, "Select a status.");
                 errorRestriction = true;
             }
-            if (!myLogs.ValidateEmailAddress(txtEmailAddress.Text) || !string.IsNullOrEmpty(txtEmailAddress.Text))
+            if (!myLogs.ValidateEmailAddress(txtEmailAddress.Text) || string.IsNullOrEmpty(txtEmailAddress.Text))
             {
                 error.SetError(txtEmailAddress, "Invalid Email Address");
+                errorRestriction = true;
+            }
+            if (string.IsNullOrEmpty(txtProfile.Text))
+            {
+                error.SetError(txtProfile, "Profile is required.");
                 errorRestriction = true;
             }
             if (errorRestriction)
@@ -258,6 +263,98 @@ namespace WindowsFormsApp2
         {
             int age = myLogs.CalculateAge(dtpBirthdate.Value);
             lblAge.Text = age.ToString();
+        }
+
+        private void txtName_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtName, string.Empty);
+        }
+
+        private void cboColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cboColor_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(cboColor, string.Empty);
+
+        }
+
+        private void cboDegree_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(cboDegree, string.Empty);
+        }
+
+        private void txtSayings_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtSayings, string.Empty);
+
+        }
+
+        private void cboStatus_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(cboStatus, string.Empty);
+
+        }
+
+        private void txtProfile_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtProfile, string.Empty);
+
+        }
+
+        private void txtUsername_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtUsername, string.Empty);
+
+        }
+
+        private void txtPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtPassword, string.Empty);
+
+        }
+
+        private void txtEmailAddress_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtEmailAddress, string.Empty);
+
+        }
+
+        private void radMale_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label2, string.Empty);
+
+        }
+
+        private void radFemale_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label2, string.Empty);
+
+        }
+
+        private void chkVball_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label3, string.Empty);
+
+        }
+
+        private void chkBadminton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBadminton_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label3, string.Empty);
+
+        }
+
+        private void chkBball_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label3, string.Empty);
+
         }
 
 
