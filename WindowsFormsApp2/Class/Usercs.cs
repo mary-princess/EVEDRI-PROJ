@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Enums;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -15,12 +16,19 @@ namespace WindowsFormsApp2.Class
         public string ImagePath { get; set; }
 
         public string FilePath { get; set; }    
-        public Usercs() { }
+        public Usercs() 
+        {
+            FilePath = @"C:\Users\User\OneDrive\Desktop\Book1.xlsx"; //laptop
+            //FilePath = @"C:\\Users\\ACT-STUDENT\\Desktop\Book1.xlsx"; //school
+        }
 
         public Usercs(Usercs usercs)
         {
-            FilePath = @"C:\\Users\\ACT-STUDENT\\Desktop\Book1.xlsx"; //school
-            //FilePath = @"C:\Users\User\OneDrive\Desktop\Book1.xlsx"; //laptop
+            this.GlobalUser = usercs.GlobalUser;
+            this.FilePath = usercs.FilePath;
+            this.ImagePath  = usercs.ImagePath;
+            this.Profile = usercs.Profile;
+            
         }
 
         public int Age { get; set; }
