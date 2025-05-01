@@ -39,8 +39,6 @@ namespace WindowsFormsApp2
         {
             Workbook book = new Workbook();
             book.LoadFromFile(myLogs.FilePath);
-            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
             Worksheet sheet = book.Worksheets[0];
 
             bool userExists = false;
@@ -59,17 +57,17 @@ namespace WindowsFormsApp2
             }
             if (userExists)
             {
-                MessageBox.Show("Username and Password already exist! Please provide another one", "Duplication Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Username and Password already exist. Please provide another one.", "Duplication Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             bool errorRestriction = false;
 
             error.Clear();
 
-            if (!string.IsNullOrEmpty(txtName.Text))
+            if (string.IsNullOrEmpty(txtName.Text))
             {
                 error.SetError(txtName, "Name is required.");
-                errorRestriction = true;
+                errorRestriction = true;    
             }
             if(!radMale.Checked && !radFemale.Checked)
             {
@@ -91,7 +89,7 @@ namespace WindowsFormsApp2
                 error.SetError(cboColor, "Select a color.");
                 errorRestriction = true;
             }
-            if (!string.IsNullOrEmpty(txtSayings.Text))
+            if (string.IsNullOrEmpty(txtSayings.Text))
             {
                 error.SetError(txtSayings, "Sayings is required.");
                 errorRestriction = true;
@@ -102,14 +100,19 @@ namespace WindowsFormsApp2
                 error.SetError(lblAge, "Fill in the birthdate field.");
                 errorRestriction = true;
             }
-            if (!string.IsNullOrEmpty(txtUsername.Text))
+            if (string.IsNullOrEmpty(txtUsername.Text))
             {
                 error.SetError(txtUsername, "Username is required.");
                 errorRestriction = true;
             }
-            if (!string.IsNullOrEmpty(txtPassword.Text))
+            if (string.IsNullOrEmpty(txtPassword.Text))
             {
                 error.SetError(txtPassword, "Password is required.");
+                errorRestriction = true;
+            }
+            if (cboStatus.SelectedItem == null)
+            {
+                error.SetError(cboStatus, "Select a status.");
                 errorRestriction = true;
             }
             if (!myLogs.ValidateEmailAddress(txtEmailAddress.Text) || !string.IsNullOrEmpty(txtEmailAddress.Text))
@@ -169,8 +172,6 @@ namespace WindowsFormsApp2
             sheet.Range[row, 12].Value = email;
 
             book.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
-            //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
-            //book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx", ExcelVersion.Version2016);
 
             myLogs.insertLogs(myLogs.GlobalUser, "Inserting Info");
             DataTable dt = sheet.ExportDataTable();
@@ -245,6 +246,18 @@ namespace WindowsFormsApp2
 
             }
 
+        }
+
+        private void dtpBirthdate_ValueChanged(object sender, EventArgs e)
+        {
+            int age = myLogs.CalculateAge(dtpBirthdate.Value);
+            lblAge.Text = age.ToString();
+        }
+
+        private void dtpBirthdate_MouseClick(object sender, MouseEventArgs e)
+        {
+            int age = myLogs.CalculateAge(dtpBirthdate.Value);
+            lblAge.Text = age.ToString();
         }
 
 

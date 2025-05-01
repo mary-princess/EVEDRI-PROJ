@@ -488,6 +488,8 @@
             this.dtpBirthdate.Size = new System.Drawing.Size(286, 26);
             this.dtpBirthdate.TabIndex = 76;
             this.dtpBirthdate.Value = new System.DateTime(2025, 3, 17, 23, 38, 31, 626);
+            this.dtpBirthdate.ValueChanged += new System.EventHandler(this.dtpBirthdate_ValueChanged);
+            this.dtpBirthdate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtpBirthdate_MouseClick);
             // 
             // chkBadminton
             // 
@@ -787,7 +789,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label lblID;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
         public System.Windows.Forms.CheckBox chkBadminton;
         public System.Windows.Forms.CheckBox chkBball;
         public System.Windows.Forms.CheckBox chkVball;
@@ -810,5 +811,6 @@
         private System.Windows.Forms.ErrorProvider error;
         public System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.Label label6;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
     }
 }
