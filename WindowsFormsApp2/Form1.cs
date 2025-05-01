@@ -179,7 +179,7 @@ namespace WindowsFormsApp2
 
             if (!string.IsNullOrEmpty(txtUsername.Text)) form2.dgvData.Rows[r].Cells[7].Value = txtUsername.Text;
             if (!string.IsNullOrEmpty(txtPassword.Text)) form2.dgvData.Rows[r].Cells[8].Value = txtPassword.Text;
-
+            if (cboStatus.SelectedItem != null) form2.dgvData.Rows[r].Cells[9].Value = cboStatus.Text;
             string imagePath = txtProfile.Text;
             if (!string.IsNullOrEmpty(imagePath)) form2.dgvData.Rows[r].Cells[10].Value = imagePath;
 
@@ -197,6 +197,7 @@ namespace WindowsFormsApp2
             sheet.Range[row, 7].Value = myLogs.Age.ToString();
             sheet.Range[row, 8].Value = txtUsername.Text;
             sheet.Range[row, 9].Value = txtPassword.Text;
+            sheet.Range[row, 10].Value = cboStatus.Text;
             sheet.Range[row, 11].Value = imagePath;
 
 
@@ -213,19 +214,7 @@ namespace WindowsFormsApp2
 
         }
 
-        //private void btnForm2_Click(object sender, EventArgs e)
-        //{
-        //    //string var = "";
-        //    //for (int i = 0; i < 5; i++)
-        //    //{
-        //    //    var += "[ " + i + " ]" + Student[i] + "\n";
-
-        //    //}
-        //    //MessageBox.Show(var);
-        //    form2.Show();
-
-
-        //}
+        
 
         private void btnClear_Click(object sender, EventArgs e)
         {

@@ -142,6 +142,7 @@ namespace WindowsFormsApp2
             
             string degree = cboDegree.SelectedItem.ToString();
             string color = cboColor.SelectedItem.ToString();
+            string status = cboStatus.SelectedItem.ToString();
             string sayings = txtSayings.Text;
             string username = txtUsername.Text;
             string password = txtPassword.Text; 
@@ -163,7 +164,7 @@ namespace WindowsFormsApp2
             sheet.Range[row, 7].Value = age.ToString();
             sheet.Range[row, 8].Value = username;
             sheet.Range[row, 9].Value = password;
-            sheet.Range[row, 10].Value = "1";
+            sheet.Range[row, 10].Value = status;
             sheet.Range[row, 11].Value = imagePath;
             sheet.Range[row, 12].Value = email;
 
