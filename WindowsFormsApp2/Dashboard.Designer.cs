@@ -868,7 +868,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label lblFemaleStudent;
         private System.Windows.Forms.Label lblBscpe;
-        private System.Windows.Forms.Label lblBscs;
         private System.Windows.Forms.Label lblBsit;
         private System.Windows.Forms.Label lblBasketball;
         private System.Windows.Forms.Label lblBadminton;
@@ -878,5 +877,6 @@
         private System.Windows.Forms.Label lblRed;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.PictureBox picProfile;
+        public System.Windows.Forms.Label lblBscs;
     }
 }

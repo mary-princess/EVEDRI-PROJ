@@ -113,29 +113,40 @@ namespace WindowsFormsApp2
             {
                 return;
             }
-
-            int selectedRow = dgvData.CurrentCell.RowIndex;
-            int excelRow = selectedRow + 2; // Adjust for header row and 1-based index in Excel
-
-
             Workbook workbook = new Workbook();
             workbook.LoadFromFile(myLogs.FilePath);
             Worksheet sh = workbook.Worksheets[0];
-
             
-            sh.Range[excelRow, 10].Value = "0";
+            int totalRows = sh.Rows.Length;
+
+            foreach (DataGridViewRow selectedRow in dgvData.SelectedRows)
+            {
+               string delete = selectedRow.Cells[7].Value.ToString();
+                for (int i = 2; i <= totalRows; i++)
+                {
+                    
+                    if (sh.Range[i, 8].Value.ToString() == delete)
+                    {
+                        sh.Range[i, 10].Value = "0";
+                        break;
+                    }
+                }
+
+            }
+            
+
+           
             workbook.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
-            showStatus("1");
-
-
-            DataTable dt = sh.ExportDataTable();
-            dgvData.DataSource = dt;
             myLogs.insertLogs(myLogs.GlobalUser, "Deleted an account");
-            MessageBox.Show("Data deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            //DataTable dt = sh.ExportDataTable();
 
             dgvData.Rows.Clear();
             showStatus("1");
 
+            MessageBox.Show("Data deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
         }
@@ -377,6 +388,14 @@ namespace WindowsFormsApp2
             log.Show();
             this.Hide();
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login(myLogs);
+            myLogs.insertLogs(myLogs.GlobalUser, "Log Out");
+            login.Show();
+            this.Hide();
         }
     }
 }
