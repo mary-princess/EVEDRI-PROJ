@@ -55,7 +55,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRestore = new System.Windows.Forms.Button();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInactiveData)).BeginInit();
@@ -281,7 +281,8 @@
             this.Column8,
             this.Column9,
             this.Column10,
-            this.Column11});
+            this.Column11,
+            this.Column12});
             this.dgvInactiveData.Location = new System.Drawing.Point(319, 163);
             this.dgvInactiveData.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInactiveData.Name = "dgvInactiveData";
@@ -289,6 +290,7 @@
             this.dgvInactiveData.Size = new System.Drawing.Size(855, 395);
             this.dgvInactiveData.TabIndex = 82;
             this.dgvInactiveData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInactiveData_CellContentClick);
+            this.dgvInactiveData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInactiveData_CellDoubleClick);
             // 
             // Column1
             // 
@@ -367,16 +369,12 @@
             this.Column11.Name = "Column11";
             this.Column11.Width = 125;
             // 
-            // btnRestore
+            // Column12
             // 
-            this.btnRestore.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestore.Location = new System.Drawing.Point(727, 569);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(100, 44);
-            this.btnRestore.TabIndex = 85;
-            this.btnRestore.Text = "RESTORE";
-            this.btnRestore.UseVisualStyleBackColor = true;
+            this.Column12.HeaderText = "Email Address";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 125;
             // 
             // InActiveStudent
             // 
@@ -384,7 +382,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1243, 649);
-            this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvInactiveData);
@@ -417,7 +414,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.DataGridView dgvInactiveData;
-        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -430,5 +426,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.PictureBox picProfile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
     }
 }

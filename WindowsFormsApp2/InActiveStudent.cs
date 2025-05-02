@@ -75,7 +75,8 @@ namespace WindowsFormsApp2
             {
                 dgvInactiveData.Rows.Add
                     (r[0].ToString(), r[1].ToString(), r[2].ToString(), r[3].ToString(), r[4].ToString(),
-                    r[5].ToString(), r[6].ToString(), r[7].ToString(), r[8].ToString(), r[9].ToString(), r[10].ToString()
+                    r[5].ToString(), r[6].ToString(), r[7].ToString(), r[8].ToString(), r[9].ToString(), r[10].ToString(),
+                    r[11].ToString()
                    );
             }
         }
@@ -85,7 +86,7 @@ namespace WindowsFormsApp2
             lblDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
             lblName.Text = myLogs.GlobalUser;
 
-         
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -93,7 +94,7 @@ namespace WindowsFormsApp2
             Dashboard dashboard = new Dashboard(myLogs);
             myLogs.insertLogs(myLogs.GlobalUser, "Visited Dashboard");
             dashboard.Show();
-            this.Hide() ;
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace WindowsFormsApp2
             addStudent addStudent = new addStudent(myLogs);
             myLogs.insertLogs(myLogs.GlobalUser, "Visited Add Student");
             addStudent.Show();
-            this.Hide() ;
+            this.Hide();
         }
 
         private void btnLogs_Click(object sender, EventArgs e)
@@ -109,7 +110,7 @@ namespace WindowsFormsApp2
             frmLogs frmLogs = new frmLogs(myLogs);
             myLogs.insertLogs(myLogs.GlobalUser, "Visited Logs");
             frmLogs.Show();
-            this.Hide() ;
+            this.Hide();
         }
 
         private void dgvInactiveData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -130,6 +131,83 @@ namespace WindowsFormsApp2
                     break;
                 }
 
+            }
+        }
+
+        private void dgvInactiveData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvInactiveData.Rows.Count)
+            {
+                int r = e.RowIndex;
+
+                DialogResult result =
+                    MessageBox.Show("Are you sure you want to update this data?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    Form1 form1 = new Form1(myLogs);
+                    form1.Show();
+
+
+                    form1.lblID.Text = r.ToString();
+                    form1.txtName.Text = dgvInactiveData.Rows[r].Cells[0].Value.ToString();
+                    string gender = dgvInactiveData.Rows[r].Cells[1].Value.ToString();
+                    form1.radMale.Checked = (gender == "Male");
+                    form1.radFemale.Checked = (gender == "Female");
+
+
+                    string hobbies = dgvInactiveData.Rows[r].Cells[2].Value.ToString();
+                    string[] arrayHobbies = hobbies.Split(',');
+
+                    form1.chkBadminton.Checked = false;
+                    form1.chkBball.Checked = false;
+                    form1.chkVball.Checked = false;
+
+                    foreach (string s in arrayHobbies)
+                    {
+                        string trim = s.Trim();
+                        if (trim == "Volleyball") form1.chkVball.Checked = true;
+                        if (trim == "Basketball") form1.chkBball.Checked = true;
+                        if (trim == "Badminton") form1.chkBadminton.Checked = true;
+
+                    }
+
+                    form1.cboDegree.SelectedItem = dgvInactiveData.Rows[r].Cells[3].Value.ToString();
+                    form1.cboColor.SelectedItem = dgvInactiveData.Rows[r].Cells[4].Value.ToString();
+                    form1.txtSayings.Text = dgvInactiveData.Rows[r].Cells[5].Value.ToString();
+
+                    DateTime birthDate;
+                    if (DateTime.TryParse(dgvInactiveData.Rows[r].Cells[6].Value.ToString(), out birthDate))
+                    {
+                        form1.dtpBirthdate.Value = birthDate;
+                        int age = myLogs.CalculateAge(birthDate);
+                        form1.lblAge.Text = age.ToString();
+                    }
+
+
+
+
+                    form1.txtUsername.Text = dgvInactiveData.Rows[r].Cells[7].Value.ToString();
+                    form1.txtPassword.Text = dgvInactiveData.Rows[r].Cells[8].Value.ToString();
+                    form1.cboStatus.SelectedItem = dgvInactiveData.Rows[r].Cells[9].Value.ToString();
+                    string imagePath = dgvInactiveData.Rows[r].Cells[10].Value.ToString();
+                    form1.txtEmailAddress.Text = dgvInactiveData.Rows[r].Cells[11].Value.ToString();    
+                    if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                    {
+                        form1.picProfile.Image = Image.FromFile(imagePath);
+                        form1.picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
+                        form1.txtProfile.Text = imagePath;
+                    }
+                    else
+                    {
+                        form1.picProfile.Image = null;
+                        form1.txtProfile.Text = "";
+
+                    }
+
+                    
+                    this.Hide();
+                }
             }
         }
     }

@@ -51,8 +51,7 @@ namespace WindowsFormsApp2
         {
             Workbook book = new Workbook();
             book.LoadFromFile(myLogs.FilePath);
-            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
+        
 
 
             Worksheet sheet = book.Worksheets[0];
@@ -60,19 +59,6 @@ namespace WindowsFormsApp2
             dgvData.DataSource = dt;
         }
 
-        //public void insertTable(int id, string name, string gender, string hobbies, string favoriteColor, string sayings, string username, string password)
-        //{
-        //    dgvData.Rows.Add(id, name, gender, hobbies, favoriteColor, sayings, username, password);
-
-        //    //int r = dgvData.Rows.Add();
-        //    //dgvData.Rows[r].Cells[0].Value = id;
-        //    //dgvData.Rows[r].Cells[1].Value = name;
-        //    //dgvData.Rows[r].Cells[2].Value = gender;
-        //    //dgvData.Rows[r].Cells[3].Value = hobbies;
-        //    //dgvData.Rows[r].Cells[4].Value = favoriteColor;
-        //    //dgvData.Rows[r].Cells[5].Value = sayings;
-
-        //}
 
         public void showStatus(string status) 
         {
@@ -249,6 +235,7 @@ namespace WindowsFormsApp2
 
                     form1.txtUsername.Text = dgvData.Rows[r].Cells[7].Value.ToString();
                     form1.txtPassword.Text = dgvData.Rows[r].Cells[8].Value.ToString();
+                    form1.txtEmailAddress.Text = dgvData.Rows[r].Cells[11].Value.ToString();
 
                     string imagePath = dgvData.Rows[r].Cells[10].Value.ToString();
 
@@ -265,7 +252,6 @@ namespace WindowsFormsApp2
 
                     }
 
-                    form1.txtEmailAddress.Text = dgvData.Rows[r].Cells[11].Value.ToString();
                     this.Hide();
 
 

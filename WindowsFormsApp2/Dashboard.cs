@@ -64,7 +64,7 @@ namespace WindowsFormsApp2
             //wb.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             Worksheet sh = wb.Worksheets[0];
             int row = sh.Rows.Length;
-            int counter = 0;
+            int counter = 1;
 
             for (int i = 2; i < row; i++)
             {

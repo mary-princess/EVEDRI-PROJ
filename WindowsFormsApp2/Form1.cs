@@ -18,9 +18,6 @@ namespace WindowsFormsApp2
     {
        
 
-
-        int id = 0;
-
         Form2 form2 = new Form2();
         Logs myLogs;
         public Form1()
@@ -136,20 +133,15 @@ namespace WindowsFormsApp2
         {
             Workbook book = new Workbook();
             book.LoadFromFile(myLogs.FilePath);
-            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
-
             Worksheet sheet = book.Worksheets[0];
 
-            Form2 form = (Form2)Application.OpenForms["Form 2"];
+            Form2 form = (Form2)Application.OpenForms["Form2"];
+           
+
             int r = form2.dgvData.CurrentCell.RowIndex;
 
-
-
-            if (!string.IsNullOrEmpty(txtName.Text))
-            {
-                form2.dgvData.Rows[r].Cells[0].Value = txtName.Text;
-            }
+            if (!string.IsNullOrEmpty(txtName.Text)) form2.dgvData.Rows[r].Cells[0].Value = txtName.Text;
+            
 
             string gender = "";
             if (radFemale.Checked == true)
@@ -157,7 +149,7 @@ namespace WindowsFormsApp2
                 form2.dgvData.Rows[r].Cells[1].Value = radFemale.Text;
                 gender = radFemale.Text;
             }
-            if (radMale.Checked == true)
+            else if (radMale.Checked == true)
             {
                 form2.dgvData.Rows[r].Cells[1].Value = radMale.Text;
                 gender = radMale.Text;
@@ -199,11 +191,11 @@ namespace WindowsFormsApp2
             sheet.Range[row, 9].Value = txtPassword.Text;
             sheet.Range[row, 10].Value = cboStatus.Text;
             sheet.Range[row, 11].Value = imagePath;
+            sheet.Range[row, 12].Value = cboStatus.Text;
 
 
             book.SaveToFile(myLogs.FilePath);
-            //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            //book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
+       
 
             myLogs.insertLogs(myLogs.GlobalUser, "Updating Info");
 

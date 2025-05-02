@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogs));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picProfile = new System.Windows.Forms.PictureBox();
-            this.btnRestore = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvLogs = new System.Windows.Forms.DataGridView();
@@ -60,17 +59,6 @@
             this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picProfile.TabIndex = 6;
             this.picProfile.TabStop = false;
-            // 
-            // btnRestore
-            // 
-            this.btnRestore.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestore.Location = new System.Drawing.Point(727, 550);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(100, 44);
-            this.btnRestore.TabIndex = 90;
-            this.btnRestore.Text = "RESTORE";
-            this.btnRestore.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
@@ -285,7 +273,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1243, 649);
-            this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvLogs);
@@ -304,8 +291,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel panel1;
