@@ -76,9 +76,10 @@ namespace WindowsFormsApp2
 
         public void showStatus(string status) 
         {
+            dgvData.Rows.Clear();
             Workbook workbook = new Workbook();
             workbook.LoadFromFile(myLogs.FilePath);
-            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
+   
 
             Worksheet worksheet = workbook.Worksheets[0];
             DataTable dt = worksheet.ExportDataTable();
@@ -88,7 +89,8 @@ namespace WindowsFormsApp2
             {
                 dgvData.Rows.Add
                     (r[0].ToString(), r[1].ToString(), r[2].ToString(), r[3].ToString(), r[4].ToString(),
-                    r[5].ToString(), r[6].ToString(), r[7].ToString(), r[8].ToString(), r[9].ToString(), r[10].ToString()
+                    r[5].ToString(), r[6].ToString(), r[7].ToString(), r[8].ToString(), r[9].ToString(), r[10].ToString(),
+                    r[11].ToString()
                    );
             }
 
@@ -101,53 +103,38 @@ namespace WindowsFormsApp2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //foreach (DataGridViewRow row in this.dgvData.SelectedRows)
-            //{
-            //    dgvData.Rows.RemoveAt(row.Index);
-            //}
+            if(dgvData.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this data?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
 
-            //LATEST
-            //if (dgvData.SelectedRows.Count > 0)
-            //{
-            //    int row= dgvData.CurrentCell.RowIndex;
+            int selectedRow = dgvData.CurrentCell.RowIndex;
+            int excelRow = selectedRow + 2; // Adjust for header row and 1-based index in Excel
 
-            //    string name = dgvData.Rows[row].Cells[0].Value.ToString();
-            //    string gender = dgvData.Rows[row].Cells[1].Value.ToString();
-            //    string hobbies = dgvData.Rows[row].Cells[2].Value.ToString();
-            //    string favoriteColor = dgvData.Rows[row].Cells[3].Value.ToString();
-            //    string sayings = dgvData.Rows[row].Cells[4].Value.ToString();
-            //    string username = dgvData.Rows[row].Cells[5].Value.ToString();
-            //    string password = dgvData.Rows[row].Cells[5].Value.ToString();
-
-            //    updateStatus(name, gender, hobbies, favoriteColor, sayings, username, password);
-
-            //    dgvData.Rows.RemoveAt(row);
-
-            //}
-
-            //else
-            //{
-            //    MessageBox.Show("Please select a student to delete.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
 
             Workbook workbook = new Workbook();
             workbook.LoadFromFile(myLogs.FilePath);
-            //workbook.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
-            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-
             Worksheet sh = workbook.Worksheets[0];
 
-            int r = dgvData.CurrentCell.RowIndex + 2;
-            sh.Range[r, 10].Value = "0";
-
+            
+            sh.Range[excelRow, 10].Value = "0";
+            workbook.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
             showStatus("1");
 
-            workbook.LoadFromFile(myLogs.FilePath, ExcelVersion.Version2016);
-            //workbook.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx", ExcelVersion.Version2016);
-            //workbook.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
 
             DataTable dt = sh.ExportDataTable();
             dgvData.DataSource = dt;
+            myLogs.insertLogs(myLogs.GlobalUser, "Deleted an account");
+            MessageBox.Show("Data deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            dgvData.Rows.Clear();
+            showStatus("1");
 
 
 
