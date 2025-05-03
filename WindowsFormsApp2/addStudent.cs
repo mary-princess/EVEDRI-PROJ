@@ -230,11 +230,7 @@ namespace WindowsFormsApp2
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            //Workbook book = new Workbook();
-            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            ////book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
-
-            //Worksheet sheet = book.Worksheets[0];
+           
 
             OpenFileDialog file = new OpenFileDialog();
             file.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
@@ -353,20 +349,32 @@ namespace WindowsFormsApp2
 
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            radFemale.Checked = false;
+            radMale.Checked = false;
 
-        //TO BE CONTINUED
-        //public void showStatus(string status)
-        //{
-        //    Workbook book = new Workbook();
-        //    book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
+            chkBadminton.Checked = false;
+            chkBball.Checked = false;
+            chkVball.Checked = false;
 
-        //    Worksheet sh = book.Worksheets[0];
-        //    DataTable dt = sh.ExportDataTable();
-        //    DataRow[] row = dt.Select("Status = " + status);
+            cboColor.SelectedIndex = -1;
+            cboDegree.SelectedIndex = -1;
 
-        //    foreach (DataRow row2 in row)
-        //    {
-        //    }
-        //}
+            txtSayings.Clear();
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtEmailAddress.Clear();
+
+            dtpBirthdate.Value = DateTime.Today;
+            lblAge.Text = string.Empty;
+            lblID.Text = string.Empty;
+
+            
+        }
+
+
+        
     }
 }

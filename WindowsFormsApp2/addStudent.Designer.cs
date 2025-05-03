@@ -76,6 +76,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
@@ -269,7 +270,7 @@
             this.btnInsert.FillColor = System.Drawing.Color.White;
             this.btnInsert.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.btnInsert.Location = new System.Drawing.Point(677, 609);
+            this.btnInsert.Location = new System.Drawing.Point(486, 604);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(159, 33);
             this.btnInsert.TabIndex = 90;
@@ -756,12 +757,32 @@
             // 
             this.error.ContainerControl = this;
             // 
+            // btnClear
+            // 
+            this.btnClear.BorderColor = System.Drawing.Color.Red;
+            this.btnClear.BorderRadius = 9;
+            this.btnClear.BorderThickness = 1;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.FillColor = System.Drawing.Color.White;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.Red;
+            this.btnClear.Location = new System.Drawing.Point(812, 604);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(159, 33);
+            this.btnClear.TabIndex = 93;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // addStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1243, 649);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.btnInsert);
@@ -828,5 +849,6 @@
         public System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.Label label6;
         public Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
     }
 }

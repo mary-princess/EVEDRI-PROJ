@@ -51,7 +51,95 @@ namespace WindowsFormsApp2
             Worksheet sheet = book.Worksheets[0];
 
             Form2 form = (Form2)Application.OpenForms["Form2"];
-           
+            bool userExists = false;
+            int totalRows = sheet.Rows.Length;
+
+            for (int i = 2; i <= totalRows; i++)
+            {
+                string existsUser = sheet.Range[i, 8].Value;
+                string existsPass = sheet.Range[i, 9].Value;
+
+                if (existsUser == txtUsername.Text || existsPass == txtPassword.Text)
+                {
+                    userExists = true;
+
+                }
+            }
+            if (userExists)
+            {
+                MessageBox.Show("Username and Password already exist. Please provide another one.", "Duplication Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            bool errorRestriction = false;
+
+            error.Clear();
+
+            if (string.IsNullOrEmpty(txtName.Text))
+            {
+                error.SetError(txtName, "Name is required.");
+                errorRestriction = true;
+            }
+            if (!radMale.Checked && !radFemale.Checked)
+            {
+                error.SetError(label2, "Select Gender.");
+                errorRestriction = true;
+            }
+            if (!chkBadminton.Checked && !chkBball.Checked && !chkVball.Checked)
+            {
+                error.SetError(label3, "Select at least one hobby.");
+                errorRestriction = true;
+            }
+            if (cboDegree.SelectedItem == null)
+            {
+                error.SetError(cboDegree, "Select a degree.");
+                errorRestriction = true;
+            }
+            if (cboColor.SelectedItem == null)
+            {
+                error.SetError(cboColor, "Select a color.");
+                errorRestriction = true;
+            }
+            if (string.IsNullOrEmpty(txtSayings.Text))
+            {
+                error.SetError(txtSayings, "Sayings is required.");
+                errorRestriction = true;
+            }
+            if (dtpBirthdate.Value.Date > DateTime.Today)
+            {
+                error.SetError(dtpBirthdate, "Birthdate is required.");
+                error.SetError(lblAge, "Fill in the birthdate field.");
+                errorRestriction = true;
+            }
+            if (string.IsNullOrEmpty(txtUsername.Text))
+            {
+                error.SetError(txtUsername, "Username is required.");
+                errorRestriction = true;
+            }
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                error.SetError(txtPassword, "Password is required.");
+                errorRestriction = true;
+            }
+            if (cboStatus.SelectedItem == null)
+            {
+                error.SetError(cboStatus, "Select a status.");
+                errorRestriction = true;
+            }
+            if (!myLogs.ValidateEmailAddress(txtEmailAddress.Text) || string.IsNullOrEmpty(txtEmailAddress.Text))
+            {
+                error.SetError(txtEmailAddress, "Invalid Email Address");
+                errorRestriction = true;
+            }
+            if (string.IsNullOrEmpty(txtProfile.Text))
+            {
+                error.SetError(txtProfile, "Profile is required.");
+                errorRestriction = true;
+            }
+            if (errorRestriction)
+            {
+                MessageBox.Show("Please correct the highlighted errors before proceeding", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             int r = form2.dgvData.CurrentCell.RowIndex;
 
@@ -139,13 +227,13 @@ namespace WindowsFormsApp2
             txtSayings.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
+            txtEmailAddress.Clear();
 
             dtpBirthdate.Value = DateTime.Today;
             lblAge.Text = string.Empty;
             lblID.Text = string.Empty;
 
-            picProfile.Image = null;
-            txtProfile.Clear();
+        
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -247,6 +335,95 @@ namespace WindowsFormsApp2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtName_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtName, string.Empty);
+        }
+
+        private void dtpBirthdate_MouseClick(object sender, MouseEventArgs e)
+        {
+            int age = myLogs.CalculateAge(dtpBirthdate.Value);
+            lblAge.Text = age.ToString();
+        }
+
+        private void dtpBirthdate_ValueChanged(object sender, EventArgs e)
+        {
+            int age = myLogs.CalculateAge(dtpBirthdate.Value);
+            lblAge.Text = age.ToString();
+        }
+
+        private void radMale_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label2, string.Empty);
+
+        }
+
+        private void radFemale_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label2, string.Empty);
+
+        }
+
+        private void chkVball_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label3, string.Empty);
+
+        }
+
+        private void chkBball_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label3, string.Empty);
+
+        }
+
+        private void chkBadminton_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(label3, string.Empty);
+
+        }
+
+        private void cboDegree_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(cboDegree, string.Empty);
+
+        }
+
+        private void cboColor_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(cboColor, string.Empty);
+
+        }
+
+        private void txtProfile_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtProfile, string.Empty);
+
+        }
+
+        private void txtUsername_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtUsername, string.Empty);
+
+        }
+
+        private void txtPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtPassword, string.Empty);
+
+        }
+
+        private void txtEmailAddress_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(txtEmailAddress, string.Empty);
+
+        }
+
+        private void cboStatus_MouseClick(object sender, MouseEventArgs e)
+        {
+            error.SetError(cboStatus, string.Empty);
 
         }
     }
