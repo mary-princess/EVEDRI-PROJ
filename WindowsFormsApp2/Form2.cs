@@ -226,18 +226,25 @@ namespace WindowsFormsApp2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-           
-
-            string searchValue = txtSearch.Text;
+            string searchValue = txtSearch.Text.Trim().ToLower();
             dgvData.ClearSelection();
-            foreach(DataGridViewRow row in dgvData.Rows) 
-            {
-                if (row.Cells[1].Value.ToString().Equals(searchValue))
-                {
-                    row.Selected = true;
-                    break;
-                }
 
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                MessageBox.Show("Please enter a value to search.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            bool matchFound = false;
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                row.Selected = true;
+
+            }
+            if (!matchFound)
+            {
+                MessageBox.Show("No matching records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

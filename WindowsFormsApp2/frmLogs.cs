@@ -91,17 +91,60 @@ namespace WindowsFormsApp2.Class
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            string searchValue = txtSearch.Text;
+            string searchValue = txtSearch.Text.Trim().ToLower();
             dgvLogs.ClearSelection();
+
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                MessageBox.Show("Please enter a value to search.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int columnIndex = -1;
+            if (cboSearch.SelectedIndex == 0)
+            {
+                columnIndex = 0; // User
+            }
+            else if (cboSearch.SelectedIndex == 1)
+            {
+                columnIndex = 1; // Message
+            }
+            
+            if(columnIndex == -1)
+            {
+                MessageBox.Show("Please select a search filter.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            bool matchFound = false;
             foreach (DataGridViewRow row in dgvLogs.Rows)
             {
-                if (row.Cells[1].Value.ToString().Equals(searchValue))
+                if(row.IsNewRow) continue; // Skip the new row placeholder
+
+                if (row.Cells[columnIndex].Value != null && row.Cells[columnIndex].Value.ToString().ToLower().Contains(searchValue))
                 {
                     row.Selected = true;
-                    break;
+                    if (!matchFound)
+                    {
+                        dgvLogs.FirstDisplayedScrollingRowIndex = row.Index; // Scroll to the first match
+                    }
+                    matchFound = true;
                 }
-
             }
+            if(!matchFound)
+            {
+                MessageBox.Show("No matching records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvLogs.ClearSelection();
+        }
+
+        private void cboSearch_MouseClick(object sender, MouseEventArgs e)
+        {
+            dgvLogs.ClearSelection();
         }
     }
 }
