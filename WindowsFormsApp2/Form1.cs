@@ -31,11 +31,7 @@ namespace WindowsFormsApp2
             this.myLogs = myLogs;
             picProfile.Image = myLogs.Profile;
             picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if (!string.IsNullOrEmpty(myLogs.ImagePath) && File.Exists(myLogs.ImagePath))
-            //{
-            //    picProfile.Image = Image.FromFile(myLogs.ImagePath);
-            //    picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //}
+            
 
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -47,87 +43,6 @@ namespace WindowsFormsApp2
             
         }
 
-
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-            //Workbook book = new Workbook();
-            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            //Worksheet sheet = book.Worksheets[0];
-
-            //string name = "",
-            //    gender = "",
-            //    hobbies = "",
-            //    favoriteColor = "",
-            //    sayings = "",
-            //    username = "",
-            //    password = "";
-            //if (!string.IsNullOrEmpty(txtName.Text))
-            //{
-            //    name += txtName.Text;
-            //}
-            //if (radFemale.Checked == true)
-            //{
-            //    gender += radFemale.Text;
-            //}
-            //if (radMale.Checked == true)
-            //{
-            //    gender += radMale.Text;
-            //}
-
-            //if (chkVball.Checked == true)
-            //{
-            //    hobbies += chkVball.Text + " , ";
-            //}
-            //if (chkBball.Checked == true)
-            //{
-            //    hobbies += chkBball.Text + " , ";
-            //}
-            //if (chkBadminton.Checked == true)
-            //{
-            //    hobbies += chkBadminton.Text + " , ";
-            //}
-
-            //if (cboColor.SelectedItem != null)
-            //{
-            //    favoriteColor += cboColor.Text;
-            //}
-
-            //if (!string.IsNullOrEmpty(txtSayings.Text))
-            //{
-            //    sayings += txtSayings.Text;
-
-            //}
-            //if (!string.IsNullOrEmpty(txtUsername.Text))
-            //{
-            //    username += txtUsername.Text;
-            //}
-            //if (!string.IsNullOrEmpty(txtPassword.Text))
-            //{
-            //    password += txtPassword.Text;
-            //}
-
-
-            ////form2.insertTable(++id, name, gender, hobbies, favoriteColor, sayings, username, password);
-
-
-            //int row = sheet.Rows.Length + 1;
-
-            //sheet.Range[row, 1].Value = name;
-            //sheet.Range[row, 2].Value = gender;
-            //sheet.Range[row, 3].Value = hobbies;
-            //sheet.Range[row, 4].Value = favoriteColor;
-            //sheet.Range[row, 5].Value = sayings;
-            //sheet.Range[row, 6].Value = username;
-            //sheet.Range[row, 7].Value = password;
-
-            //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
-            //myLogs.insertLogs(username, "Inserting Info");
-            //DataTable dt = sheet.ExportDataTable();
-            //form2.dgvData.DataSource = dt;
-            //MessageBox.Show("Successfully added data.");
-
-
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -301,9 +216,7 @@ namespace WindowsFormsApp2
         {
             Workbook book = new Workbook();
             book.LoadFromFile(myLogs.FilePath);
-            //book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-            //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
-
+        
             Worksheet sheet = book.Worksheets[0];
 
             OpenFileDialog file = new OpenFileDialog();
@@ -327,8 +240,7 @@ namespace WindowsFormsApp2
                 sheet.Range[row, 11].Value = file.FileName;
 
                 book.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
-                //book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx", ExcelVersion.Version2016);
-                //book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx", ExcelVersion.Version2016);
+           
 
             }
         }

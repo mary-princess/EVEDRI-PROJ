@@ -31,11 +31,7 @@ namespace WindowsFormsApp2
             showStatus("1");
             picProfile.Image = myLogs.Profile;
             picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if (!string.IsNullOrEmpty(myLogs.ImagePath) && File.Exists(myLogs.ImagePath))
-            //{
-            //    picProfile.Image = Image.FromFile(myLogs.ImagePath);
-            //    picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //}
+         
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -126,9 +122,6 @@ namespace WindowsFormsApp2
             myLogs.insertLogs(myLogs.GlobalUser, "Deleted an account");
 
 
-
-            //DataTable dt = sh.ExportDataTable();
-
             dgvData.Rows.Clear();
             showStatus("1");
 
@@ -137,41 +130,7 @@ namespace WindowsFormsApp2
 
         }
 
-        //private void updateStatus(string name, string gender, string hobbies, string color, string sayings, string username, string password)
-        //{
-        //    Workbook book = new Workbook();
-        //    book.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-        //    //book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx");
-
-
-        //    Worksheet sheet = book.Worksheets[0];
-
-        //    int row = -1;
-        //    for (int i = 1; i <= sheet.Rows.Length; i++)  // Starting from 1 assuming row 0 is headers
-        //    {
-        //        if (sheet.Range[i, 6].Value.ToString() == username)  // Match username to find the row
-        //        {
-        //            row = i;
-        //            break;
-        //        }
-        //    }
-
-        //    if (row != -1)
-        //    {
-        //        // Set the Status column (last column) to 0 (inactive)
-        //        sheet.Range[row, 8].Value2 = 0;  // Column 8 should be the Status column
-
-        //        // Save the changes to the Excel file
-        //        book.SaveToFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
-
-        //        MessageBox.Show("Student status updated to inactive.", "Status Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Student not found in the Active Students list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-
-        //}
+       
 
         private void dgvData_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -257,65 +216,6 @@ namespace WindowsFormsApp2
 
                 }
             }
-
-            //int r = dgvData.CurrentCell.RowIndex;
-            //Form1 form1 = new Form1(myLogs);
-            //form1.Show();
-            //Form1 form1 = (Form1)Application.OpenForms["Form1"];
-
-            //form1.lblID.Text = r.ToString();
-            //form1.txtName.Text = dgvData.Rows[r].Cells[0].Value.ToString();
-            //string gender = dgvData.Rows[r].Cells[1].Value.ToString();
-            //form1.radMale.Checked = (gender == "Male");
-            //form1.radFemale.Checked = (gender == "Female");
-
-
-            //string hobbies = dgvData.Rows[r].Cells[2].Value.ToString();
-            //string[] arrayHobbies = hobbies.Split(',');
-
-            //form1.chkBadminton.Checked = false;
-            //form1.chkBball.Checked = false;
-            //form1.chkVball.Checked = false;
-
-            //foreach (string s in arrayHobbies)
-            //{
-            //    string trim = s.Trim();
-            //    if (trim == "Volleyball") form1.chkVball.Checked = true;
-            //    if (trim == "Basketball") form1.chkBball.Checked = true;
-            //    if (trim == "Badminton") form1.chkBadminton.Checked = true;
-
-            //}
-
-            //form1.cboDegree.SelectedItem = dgvData.Rows[r].Cells[3].Value.ToString();
-            //form1.cboColor.SelectedItem = dgvData.Rows[r].Cells[4].Value.ToString();
-            //form1.txtSayings.Text = dgvData.Rows[r].Cells[5].Value.ToString();
-
-            //DateTime birthDate = DateTime.Parse(dgvData.Rows[r].Cells[6].Value.ToString());
-            //form1.dtpBirthdate.Value = birthDate;
-
-            //int age = myLogs.CalculateAge(birthDate);
-            //form1.lblAge.Text = age.ToString();
-
-            //form1.txtUsername.Text = dgvData.Rows[r].Cells[7].Value.ToString();
-            //form1.txtPassword.Text = dgvData.Rows[r].Cells[8].Value.ToString();
-
-            //string imagePath = dgvData.Rows[r].Cells[10].Value?.ToString();
-
-            //if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
-            //{
-            //    form1.picProfile.Image = Image.FromFile(imagePath);
-            //    form1.picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //    form1.txtProfile.Text = imagePath;
-            //}
-            //else
-            //{
-            //    form1.picProfile.Image = null;
-            //    form1.txtProfile.Text = "";
-
-            //}
-
-            //this.Hide();
-
 
         }
 

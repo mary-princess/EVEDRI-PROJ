@@ -29,11 +29,7 @@ namespace WindowsFormsApp2
 
             picProfile.Image = mylogs.Profile;
             picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if (!string.IsNullOrEmpty(myLogs.ImagePath) && File.Exists(myLogs.ImagePath))
-            //{
-            //    picProfile.Image = Image.FromFile(myLogs.ImagePath);
-            //    picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //}
+          
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {

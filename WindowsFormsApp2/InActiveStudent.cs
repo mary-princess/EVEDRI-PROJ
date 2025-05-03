@@ -28,11 +28,7 @@ namespace WindowsFormsApp2
             showStatus("0");
             picProfile.Image = mylogs.Profile;
             picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if (!string.IsNullOrEmpty(myLogs.ImagePath) && File.Exists(myLogs.ImagePath))
-            //{
-            //    picProfile.Image = Image.FromFile(myLogs.ImagePath);
-            //    picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //}
+           
         }
 
         private void Inactive()
@@ -56,10 +52,7 @@ namespace WindowsFormsApp2
 
         private void btnInactiveStatus_Click(object sender, EventArgs e)
         {
-            //InActiveStudent InactiveStudent = new InActiveStudent(myLogs);
-            //myLogs.insertLogs(myLogs.GlobalUser, "Visited Inactive Student");
-            //InactiveStudent.Show();
-            //this.Hide();
+          
         }
         public void showStatus(string status)
         {

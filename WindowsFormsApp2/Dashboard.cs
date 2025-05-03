@@ -26,12 +26,7 @@ namespace WindowsFormsApp2
             this.myLogs = myLogs;
             picProfile.Image = myLogs.Profile;
             picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if (!string.IsNullOrEmpty(myLogs.ImagePath) && File.Exists(myLogs.ImagePath))
-            //{
-            //    picProfile.Image = Image.FromFile(myLogs.ImagePath);    
-            //    picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
-            //}
-
+           
         }
 
 
@@ -61,7 +56,6 @@ namespace WindowsFormsApp2
         {
             Workbook wb = new Workbook();
             wb.LoadFromFile(myLogs.FilePath);
-            //wb.LoadFromFile(@"C:\Users\User\OneDrive\Desktop\Book1.xlsx");
             Worksheet sh = wb.Worksheets[0];
             int row = sh.Rows.Length;
             int counter = 1;
