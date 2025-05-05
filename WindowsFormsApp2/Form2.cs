@@ -235,17 +235,18 @@ namespace WindowsFormsApp2
                 return;
             }
 
-
+            dgvData.SelectionMode =  DataGridViewSelectionMode.FullRowSelect;
             bool matchFound = false;
             foreach (DataGridViewRow row in dgvData.Rows)
             {
+                if (row.Cells[0].Value.ToString().Equals(searchValue)) 
                 row.Selected = true;
-
+                else if (matchFound)
+                {
+                    MessageBox.Show("No matching records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (!matchFound)
-            {
-                MessageBox.Show("No matching records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
 
         }
 

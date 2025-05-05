@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -122,18 +123,17 @@ namespace WindowsFormsApp2
                 return;
             }
 
-
+            dgvInactiveData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             bool matchFound = false;
             foreach (DataGridViewRow row in dgvInactiveData.Rows)
             {
-                row.Selected = true;
-
+                if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    row.Selected = true;
+                else if (matchFound)
+                {
+                    MessageBox.Show("No matching records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (!matchFound)
-            {
-                MessageBox.Show("No matching records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
         }
 
         private void dgvInactiveData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
