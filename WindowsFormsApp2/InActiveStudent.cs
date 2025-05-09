@@ -212,5 +212,50 @@ namespace WindowsFormsApp2
                 }
             }
         }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            if (dgvInactiveData.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a row to restore data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult result = MessageBox.Show("Are you sure you want to restore this data?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+            Workbook workbook = new Workbook();
+            workbook.LoadFromFile(myLogs.FilePath);
+            Worksheet sh = workbook.Worksheets[0];
+
+            int totalRows = sh.Rows.Length;
+
+            foreach (DataGridViewRow selectedRow in dgvInactiveData.SelectedRows)
+            {
+                string restore = selectedRow.Cells[7].Value.ToString();
+                for (int i = 2; i <= totalRows; i++)
+                {
+
+                    if (sh.Range[i, 8].Value.ToString() == restore)
+                    {
+                        sh.Range[i, 10].Value = "1";
+                        break;
+                    }
+                }
+
+            }
+
+
+
+            workbook.SaveToFile(myLogs.FilePath, ExcelVersion.Version2016);
+            myLogs.insertLogs(myLogs.GlobalUser, "Restored an account");
+
+
+            dgvInactiveData.Rows.Clear();
+            showStatus("0");
+
+            MessageBox.Show("Data restored successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

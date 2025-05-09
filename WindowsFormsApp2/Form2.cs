@@ -83,6 +83,8 @@ namespace WindowsFormsApp2
 
         }
 
+        
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if(dgvData.CurrentRow == null)
