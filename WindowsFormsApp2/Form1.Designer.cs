@@ -45,8 +45,6 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.cboStatus = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtProfile = new System.Windows.Forms.TextBox();
@@ -311,8 +309,6 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 25;
-            this.guna2GradientPanel1.Controls.Add(this.cboStatus);
-            this.guna2GradientPanel1.Controls.Add(this.label6);
             this.guna2GradientPanel1.Controls.Add(this.txtEmailAddress);
             this.guna2GradientPanel1.Controls.Add(this.label12);
             this.guna2GradientPanel1.Controls.Add(this.txtProfile);
@@ -349,34 +345,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(907, 543);
             this.guna2GradientPanel1.TabIndex = 92;
-            // 
-            // cboStatus
-            // 
-            this.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.cboStatus.Location = new System.Drawing.Point(588, 449);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(286, 29);
-            this.cboStatus.TabIndex = 99;
-            this.cboStatus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboStatus_MouseClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(119)))));
-            this.label6.Location = new System.Drawing.Point(485, 458);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 19);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "Status:";
             // 
             // txtEmailAddress
             // 
@@ -429,6 +397,7 @@
             this.btnProfile.Size = new System.Drawing.Size(124, 33);
             this.btnProfile.TabIndex = 89;
             this.btnProfile.Text = "PROFILE";
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click_1);
             // 
             // txtPassword
             // 
@@ -816,8 +785,6 @@
         private System.Windows.Forms.Label lblName;
         public System.Windows.Forms.PictureBox picProfile;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        public System.Windows.Forms.ComboBox cboStatus;
-        private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtEmailAddress;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtProfile;

@@ -191,7 +191,7 @@ namespace WindowsFormsApp2
 
                     form1.txtUsername.Text = dgvInactiveData.Rows[r].Cells[7].Value.ToString();
                     form1.txtPassword.Text = dgvInactiveData.Rows[r].Cells[8].Value.ToString();
-                    form1.cboStatus.SelectedItem = dgvInactiveData.Rows[r].Cells[9].Value.ToString();
+                    //form1.cboStatus.SelectedItem = dgvInactiveData.Rows[r].Cells[9].Value.ToString();
                     string imagePath = dgvInactiveData.Rows[r].Cells[10].Value.ToString();
                     form1.txtEmailAddress.Text = dgvInactiveData.Rows[r].Cells[11].Value.ToString();    
                     if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
