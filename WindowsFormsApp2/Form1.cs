@@ -294,6 +294,11 @@ namespace WindowsFormsApp2
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             Login login = new Login(myLogs);
             myLogs.insertLogs(myLogs.GlobalUser, "Log Out");
             login.Show();
