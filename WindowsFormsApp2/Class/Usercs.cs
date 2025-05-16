@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp2.Class
@@ -18,8 +19,8 @@ namespace WindowsFormsApp2.Class
         public string FilePath { get; set; }    
         public Usercs() 
         {
-            FilePath = @"C:\Users\User\OneDrive\Desktop\Book1.xlsx"; //laptop
-            //FilePath = @"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx"; //school
+            //FilePath = @"C:\Users\User\OneDrive\Desktop\Book1.xlsx"; //laptop
+            FilePath = @"C:\Users\AC    T-STUDENT\Desktop\Book1.xlsx"; //school
         }
 
         public Usercs(Usercs usercs)
@@ -43,7 +44,15 @@ namespace WindowsFormsApp2.Class
         }
         public bool ValidateEmailAddress(string emailAddress)
         {
-            return emailAddress.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase);
+            if (string.IsNullOrEmpty(emailAddress))
+            {
+                return false;
+            }
+
+            // More comprehensive regular expression for email validation
+            string emailRegex = @"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
+
+            return Regex.IsMatch(emailAddress, emailRegex);
         }
     }
 }
