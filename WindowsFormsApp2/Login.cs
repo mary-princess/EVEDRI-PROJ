@@ -52,6 +52,7 @@ namespace WindowsFormsApp2
 
                     logs.GlobalUser = sheet.Range[i, 8].Value;
                     logs.insertLogs(logs.GlobalUser, "Log In");
+                    logs.Age = Convert.ToInt32(sheet.Range[i, 7].Value);
 
                     
                         
@@ -84,7 +85,7 @@ namespace WindowsFormsApp2
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this data?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure you want to close this application", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
                 return;

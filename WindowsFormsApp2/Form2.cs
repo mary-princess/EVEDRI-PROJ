@@ -202,8 +202,8 @@ namespace WindowsFormsApp2
 
                     if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                     {
-                        form1.picProfile.Image = Image.FromFile(imagePath);
-                        form1.picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
+                        //form1.picProfile.Image = Image.FromFile(imagePath);
+                        //form1.picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
                         form1.txtProfile.Text = imagePath;
                     }
                     else
@@ -301,7 +301,7 @@ namespace WindowsFormsApp2
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this data?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure you want to close this application", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
                 return;

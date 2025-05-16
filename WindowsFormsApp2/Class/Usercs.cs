@@ -20,7 +20,7 @@ namespace WindowsFormsApp2.Class
         public Usercs() 
         {
             //FilePath = @"C:\Users\User\OneDrive\Desktop\Book1.xlsx"; //laptop
-            FilePath = @"C:\Users\AC    T-STUDENT\Desktop\Book1.xlsx"; //school
+            FilePath = @"C:\Users\ACT-STUDENT\Desktop\Book1.xlsx"; //school
         }
 
         public Usercs(Usercs usercs)
